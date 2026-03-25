@@ -4,66 +4,78 @@ import { useEffect, useRef, useState } from "react";
 // ─── Profile Data ────────────────────────────────────────────────────────────
 
 const PROFILE = {
-  name: "Krity Sharma",
-  tagline: "Full-Stack Developer",
-  bio: "Crafting elegant digital experiences with clean code and creative vision. I build full-stack web applications that are as beautiful as they are functional.",
-  email: "krity8780sharma@gmail.com",
-  phone: "+91-9610040623",
-  github: "https://github.com/Krity2004",
-  linkedin: "https://www.linkedin.com/in/krity-sharma-996832297",
+  name: "Savita Pant",
+  tagline: "Software Engineer",
+  bio: "A passionate developer building functional and user-friendly web applications, with a keen interest in problem-solving and clean code. I specialize in modern frameworks and love turning complex challenges into elegant, efficient solutions. Whether working on dynamic e-commerce platforms or intelligent chatbots, I focus on delivering seamless, high-performance user experiences that truly make a difference.",
+  email: "pantsavita5@gmail.com",
+  phone: "+91-6284511645",
+  github: "https://github.com/SavitaBytes",
+  linkedin: "https://www.linkedin.com/in/savitapant",
   // resume.pdf must be in the public/ folder
   resumeUrl: import.meta.env.BASE_URL + "resume.pdf",
 };
 
 const SKILLS = {
-  "Languages": ["C++", "JavaScript", "C", "PHP"],
-  "Frameworks": ["React.js", "Node.js", "Express.js", "Bootstrap", "Tailwind CSS", "REST APIs"],
-  "Databases & Tools": ["MongoDB", "MySQL", "Git", "GitHub"],
-  "Soft Skills": ["Problem Solving", "Teamwork", "Time Management", "Adaptability"],
+  "Languages": ["C++", "JavaScript", "C", "Python", "PHP", "Java"],
+  "Frameworks": ["HTML and CSS", "Bootstrap", "NodeJS", "React"],
+  "Databases & Tools": ["MySQL", "MongoDB"],
+  "Soft Skills": ["Problem-Solving Skills", "Team Player", "Project Management", "Adaptability"],
 };
 
 const PROJECTS = [
   {
-    title: "Applicant Tracking System",
-    subtitle: "MERN-Stack Job Portal",
-    date: "Jan 2026",
-    description: "A comprehensive ATS handling end-to-end hiring workflows — job creation, multi-stage approval, candidate applications, and recruiter screening.",
+    title: "Sefire marketing – Fire Safety & Equipment",
+    subtitle: "E-commerce website",
+    date: "August 2025",
+    description: "An informational platform highlighting fire safety practices and tools.",
     highlights: [
-      "JWT-based authentication with 4 distinct user roles and protected route middleware",
-      "15+ REST API endpoints for job posting CRUD, approval workflows, and candidate shortlisting",
-      "Role-specific dashboards with Redux state management and responsive Tailwind CSS UI",
+      "Created an informational platform that highlights fire safety practices, displays safety tools, and provides emergency contact details along with location access for nearby fire stations.",
+      "Included interactive sections such as animated service cards, categorized fire-safety tips, and a quiz with dynamic visuals to make learning engaging.",
+      "Focused on easy navigation with emergency buttons, an organized equipment showcase, and login setup to make the site practical and accessible.",
     ],
-    tags: ["React", "Redux", "Node.js", "Express.js", "MongoDB", "JWT", "Tailwind CSS"],
-    github: "https://github.com/Krity2004/application-tracking-system",
+    tags: ["HTML", "CSS", "JavaScript", "jQuery", "PHP", "MySQL"],
+    github: "#",
     color: "#b8860b",
   },
   {
-    title: "Real-Time Chat App",
-    subtitle: "Instant Messaging Platform",
-    date: "Feb 2025",
-    description: "A full-stack real-time messaging application supporting instant communication with rich features and responsive design.",
+    title: "AI Legal Advice Chatbot",
+    subtitle: "Legal Support Chatbot",
+    date: "August 2025",
+    description: "A chatbot system that offers basic legal suggestions using the Gemini API.",
     highlights: [
-      "WebSocket-based messaging with Socket.io for one-on-one and group chats",
-      "Online status indicators, typing notifications, and message alerts",
-      "Secure authentication with bcrypt hashing and avatar uploads",
+      "Developed a simple chatbot system that offers basic legal suggestions using the Gemini API, allowing users to ask questions and receive instant AI-generated guidance.",
+      "Implemented clear message formatting, input handling, and smooth conversation flow so users can easily follow the information provided.",
+      "Designed a neat and user-friendly interface that can be upgraded with additional legal categories or advanced features in the future.",
     ],
-    tags: ["React", "Socket.io", "Node.js", "MongoDB", "JWT", "Bcrypt"],
-    github: "https://github.com/Krity2004/Real-Time-Chat-Application",
+    tags: ["Python", "Tkinter", "Gemini API"],
+    github: "#",
     color: "#c77dba",
+  },
+  {
+    title: "Hospital Management System",
+    subtitle: "Manage hospital System",
+    date: "July 2025",
+    description: "A hospital management website for handling patient records and appointments.",
+    highlights: [
+      "Built a hospital management website supported by C++ and DSA logic for handling patient records, doctor details, and appointment scheduling in an organized structure.",
+      "Implemented backend data handling using C++ with DSA techniques such as queues, linked lists, and sorting to manage patient flow and record.",
+      "Built a simple, responsive interface using HTML, CSS, and JavaScript.",
+    ],
+    tags: ["C++", "DSA", "HTML", "CSS", "JavaScript"],
+    github: "#",
+    color: "#9e6b3a",
   },
 ];
 
 const CERTIFICATES = [
-  { name: "Hardware & OS Essentials by Coursera", issuer: "IBM (Coursera)", date: "Oct 2025", link: "https://www.linkedin.com/posts/krity-sharma_hardware-and-operating-system-essentials-activity-7398https://www.credly.com/badges/a762f4f9-6360-4822-b280-ecc8fa7b35dc/linked_in?t=t68p8x763872129753088-b-L4?utm_source=share&&utm_medium=member_desktop&&rcm=ACoAAEfZFgIBI1feKdhrhYJ-l0iIh1eWq1dHSgk" },
-  { name: "Computational Theory & Finite Automata", issuer: "Infosys Springboard", date: "Aug 2025", link: "https://www.linkedin.com/posts/krity-sharma_infosys-springboard-computationaltheory-activity-7383489723249569792-_MjC?utm_source=share&&utm_medium=member_desktop&&rcm=ACoAAEfZFgIBI1feKdhrhYJ-l0iIh1eWq1dHSgk" },
-  { name: "SQL to MongoDB Document Model", issuer: "MongoDB University", date: "Jun 2025", link: "https://www.credly.com/badges/ccf527d0-20af-4867-87e2-8ad87d78b169/linked_in_profile" },
-  { name: "Responsive Web Design by FreeCodeCamp", issuer: "FreeCodeCamp", date: "Dec 2023", link: "https://www.freecodecamp.org/certification/krity10042004/responsive-web-design" },
+  { name: "Computational Theory: Language Principle & Finite Automata Theory", issuer: "Certificate", date: "Aug 2025", link: "" },
+  { name: "ChatGPT-4 Prompt Engineering: ChatGPT, Generative AI & LLM", issuer: "Certificate", date: "Aug 2025", link: "" },
+  { name: "Social Networks", issuer: "IIT Madras", date: "Apr 2025", link: "" },
 ];
 
 const ACHIEVEMENTS = [
-  { text: 'Gold Level in "Go for Gold" Contest by Accenture (iAspire)', date: "Jan 2026" },
-  { text: "Solved 150+ DSA problems across LeetCode", date: "Dec 2025" },
-  { text: "Built & deployed full-stack projects with REST API integration", date: "Nov 2025" },
+  { text: 'Research Paper Presentation: Presented a research paper titled "Single Precision General Matrix Multiply Kernel Performance" at the 9th International Conference on Computing Sciences (ICCS-2024), organized by Lovely Professional University.', date: "2024" },
+  { text: "Served as Class Representative: Acted as communication link between faculty and students, supporting coordination, query resolution, and class activities.", date: "Present" },
 ];
 
 const EDUCATION = [
@@ -72,21 +84,21 @@ const EDUCATION = [
     school: "Lovely Professional University",
     location: "Punjab, India",
     period: "2023 — Present",
-    grade: "CGPA: 6.9",
+    grade: "CGPA: 6.3",
   },
   {
-    degree: "Intermediate (XII)",
-    school: "Kendriya Vidyalaya No. 2",
-    location: "Rajasthan, India",
-    period: "2021 — 2022",
-    grade: "80%",
+    degree: "Intermediate",
+    school: "Jawahar Navodaya Vidhalaya",
+    location: "S.B.S Nagar, Punjab",
+    period: "2022 — 2023",
+    grade: "77%",
   },
   {
-    degree: "Matriculation (X)",
-    school: "Kendriya Vidyalaya No. 2",
-    location: "Rajasthan, India",
-    period: "2019 — 2020",
-    grade: "87%",
+    degree: "Matriculation",
+    school: "Jawahar Navodaya Vidhalaya",
+    location: "S.B.S Nagar, Punjab",
+    period: "2020 — 2021",
+    grade: "82%",
   },
 ];
 
@@ -94,32 +106,32 @@ const EDUCATION = [
 
 const THEMES = {
   dark: {
-    bg: "#0f0d0e",
-    bgSoft: "#171415",
-    bgCard: "#1c1819",
-    text: "#f5ede6",
-    textSoft: "#a39890",
-    accent: "#d4a574",
-    accentSoft: "rgba(212,165,116,0.12)",
-    accentHover: "#e8c49a",
-    border: "#2d2628",
-    rose: "#c77dba",
-    roseSoft: "rgba(199,125,186,0.1)",
-    gold: "#d4a574",
+    bg: "#09090b",
+    bgSoft: "#18181b",
+    bgCard: "rgba(24, 24, 27, 0.6)",
+    text: "#fafafa",
+    textSoft: "#a1a1aa",
+    accent: "#8b5cf6",
+    accentSoft: "rgba(139, 92, 246, 0.15)",
+    accentHover: "#a78bfa",
+    border: "rgba(255, 255, 255, 0.08)",
+    rose: "#ec4899",
+    roseSoft: "rgba(236, 72, 153, 0.15)",
+    gold: "#f59e0b",
   },
   light: {
-    bg: "#faf6f2",
-    bgSoft: "#f3ede6",
-    bgCard: "#ffffff",
-    text: "#2c1810",
-    textSoft: "#7a6860",
-    accent: "#9e6b3a",
-    accentSoft: "rgba(158,107,58,0.1)",
-    accentHover: "#b8860b",
-    border: "#e4dbd2",
-    rose: "#a0527a",
-    roseSoft: "rgba(160,82,122,0.08)",
-    gold: "#9e6b3a",
+    bg: "#ffffff",
+    bgSoft: "#f4f4f5",
+    bgCard: "rgba(255, 255, 255, 0.6)",
+    text: "#09090b",
+    textSoft: "#52525b",
+    accent: "#6d28d9",
+    accentSoft: "rgba(109, 40, 217, 0.1)",
+    accentHover: "#7c3aed",
+    border: "rgba(0, 0, 0, 0.1)",
+    rose: "#be185d",
+    roseSoft: "rgba(190, 24, 93, 0.1)",
+    gold: "#d97706",
   },
 };
 
@@ -233,11 +245,11 @@ function SectionTitle({ label, title, theme }) {
       transition={{ duration: 0.6 }}
       style={{ marginBottom: 40 }}
     >
-      <p style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "0.9rem", color: theme.rose, letterSpacing: 4, textTransform: "uppercase", marginBottom: 8 }}>
+      <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.9rem", color: theme.rose, letterSpacing: 4, textTransform: "uppercase", marginBottom: 8 }}>
         {label}
       </p>
       <h1 style={{
-        fontFamily: "'Playfair Display', Georgia, serif",
+        fontFamily: "'Inter', sans-serif",
         fontSize: "clamp(2rem, 4vw, 3rem)",
         fontWeight: 500, color: theme.text, lineHeight: 1.2,
         letterSpacing: "-0.01em",
@@ -302,16 +314,16 @@ function Nav({ activeSection, mode, setMode, theme }) {
         transition: "border-color 0.3s",
       }}
     >
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 32px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 68 }}>
+      <div style={{ maxWidth: 1150, margin: "0 auto", padding: "0 32px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 68 }}>
         <motion.div
           whileHover={{ scale: 1.03 }}
           onClick={() => scrollToSection("Home")}
           style={{
-            cursor: "pointer", fontFamily: "'Playfair Display', Georgia, serif",
+            cursor: "pointer", fontFamily: "'Inter', sans-serif",
             fontSize: "1.4rem", fontWeight: 600, color: theme.text, fontStyle: "italic",
           }}
         >
-          K<span style={{ color: theme.rose }}>.</span>S
+          S<span style={{ color: theme.rose }}>.</span>P
         </motion.div>
 
         <div style={{ display: "flex", gap: 4, alignItems: "center" }} className="desktop-nav">
@@ -324,7 +336,7 @@ function Nav({ activeSection, mode, setMode, theme }) {
                 background: activeSection === s ? theme.accentSoft : "transparent",
                 border: "none", borderRadius: 8, padding: "8px 16px",
                 color: activeSection === s ? theme.accent : theme.textSoft,
-                fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1rem",
+                fontFamily: "'Inter', sans-serif", fontSize: "1rem",
                 fontWeight: 600, cursor: "pointer", transition: "all 0.25s",
                 letterSpacing: 0.5,
               }}
@@ -343,7 +355,7 @@ function Nav({ activeSection, mode, setMode, theme }) {
               background: `linear-gradient(135deg, ${theme.accent}, ${theme.rose})`,
               border: "none", borderRadius: 50, padding: "8px 18px",
               color: "#fff",
-              fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "0.9rem",
+              fontFamily: "'Inter', sans-serif", fontSize: "0.9rem",
               fontWeight: 700, cursor: "pointer", letterSpacing: 0.5,
               textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 6,
               marginLeft: 4,
@@ -386,7 +398,7 @@ function Nav({ activeSection, mode, setMode, theme }) {
                     background: activeSection === s ? theme.accentSoft : "transparent",
                     border: "none", borderRadius: 8, padding: "12px 16px",
                     color: activeSection === s ? theme.accent : theme.textSoft,
-                    fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.05rem", fontWeight: 600,
+                    fontFamily: "'Inter', sans-serif", fontSize: "1.05rem", fontWeight: 600,
                     cursor: "pointer", textAlign: "left",
                   }}
                 >{s}</button>
@@ -395,12 +407,12 @@ function Nav({ activeSection, mode, setMode, theme }) {
               {/* Download Resume in mobile menu */}
               <a
                 href={PROFILE.resumeUrl}
-                download
+                download="Savita_Pant_Resume.pdf"
                 style={{
                   background: `linear-gradient(135deg, ${theme.accent}, ${theme.rose})`,
                   border: "none", borderRadius: 8, padding: "12px 16px",
                   color: "#fff",
-                  fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.05rem", fontWeight: 600,
+                  fontFamily: "'Inter', sans-serif", fontSize: "1.05rem", fontWeight: 600,
                   cursor: "pointer", textAlign: "left", textDecoration: "none",
                   display: "flex", alignItems: "center", gap: 8,
                 }}
@@ -410,7 +422,7 @@ function Nav({ activeSection, mode, setMode, theme }) {
               </a>
 
               <button onClick={() => { setMode(mode === "dark" ? "light" : "dark"); setMobileOpen(false); }}
-                style={{ background: theme.accentSoft, border: "none", borderRadius: 8, padding: "12px 16px", color: theme.accent, fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.05rem", cursor: "pointer", textAlign: "left" }}>
+                style={{ background: theme.accentSoft, border: "none", borderRadius: 8, padding: "12px 16px", color: theme.accent, fontFamily: "'Inter', sans-serif", fontSize: "1.05rem", cursor: "pointer", textAlign: "left" }}>
                 {mode === "dark" ? "Light Mode" : "Dark Mode"}
               </button>
             </div>
@@ -426,102 +438,93 @@ function Nav({ activeSection, mode, setMode, theme }) {
 function HomeSection({ theme, mode }) {
   return (
     <section id="Home" style={{ minHeight: "100vh", paddingTop: 110, paddingBottom: 80 }}>
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 32px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "center", minHeight: "75vh" }} className="hero-grid">
-          <motion.div initial={{ x: -50, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.8 }}>
-            <p style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1rem", color: theme.rose, letterSpacing: 3, marginBottom: 16 }}>
+      <div style={{ maxWidth: 1150, margin: "0 auto", padding: "0 32px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1.15fr 0.85fr", gap: "5vw", alignItems: "center", minHeight: "80vh" }} className="hero-grid">
+          <motion.div initial={{ x: -30, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.8 }} style={{ paddingRight: "1rem" }}>
+            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.95rem", color: theme.accent, letterSpacing: 2.5, textTransform: "uppercase", marginBottom: 12, fontWeight: 600 }}>
               Hello, I'm
             </p>
             <h1 style={{
-              fontFamily: "'Playfair Display', Georgia, serif",
-              fontSize: "clamp(2.5rem, 5vw, 4rem)",
-              fontWeight: 500, color: theme.text, lineHeight: 1.1,
-              marginBottom: 10, letterSpacing: "-0.02em",
+              fontFamily: "'Inter', sans-serif",
+              fontSize: "clamp(3rem, 6vw, 4.5rem)",
+              fontWeight: 800, color: theme.text, lineHeight: 1.1,
+              marginBottom: 16, letterSpacing: "-0.03em",
             }}>
-              {PROFILE.name}
+              {PROFILE.name}<span style={{ color: theme.rose }}>.</span>
             </h1>
             <h2 style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)",
-              fontWeight: 400, color: theme.textSoft, marginBottom: 28,
-              fontStyle: "italic", lineHeight: 1.5,
+              fontFamily: "'Inter', sans-serif",
+              fontSize: "clamp(1.2rem, 2vw, 1.6rem)",
+              fontWeight: 500, color: theme.textSoft, marginBottom: 24, lineHeight: 1.5,
             }}>
-              <TypeWriter words={["Full-Stack Developer", "MERN Enthusiast", "Problem Solver", "Creative Coder"]} theme={theme} />
+              <TypeWriter words={["Software Engineer", "Problem Solver", "Creative Coder", "Tech Enthusiast"]} theme={theme} />
             </h2>
             <p style={{
-              fontFamily: "'Lora', Georgia, serif", fontSize: "1.02rem",
-              color: theme.textSoft, lineHeight: 1.8, marginBottom: 36, maxWidth: 480,
+              fontFamily: "'Inter', sans-serif", fontSize: "1.05rem",
+              color: theme.textSoft, lineHeight: 1.8, marginBottom: 40, maxWidth: 520,
             }}>
               {PROFILE.bio}
             </p>
 
-            <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-              <motion.a whileHover={{ scale: 1.03, y: -2 }} whileTap={{ scale: 0.97 }}
+            <div style={{ display: "flex", gap: 16, flexWrap: "wrap", alignItems: "center" }}>
+              <motion.a whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}
                 href={`mailto:${PROFILE.email}`}
                 style={{
                   background: `linear-gradient(135deg, ${theme.accent}, ${theme.rose})`,
-                  color: "#fff", padding: "13px 30px", borderRadius: 50,
-                  textDecoration: "none", fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontWeight: 700, fontSize: "0.95rem", letterSpacing: 1,
+                  color: "#fff", padding: "14px 32px", borderRadius: 12,
+                  textDecoration: "none", fontFamily: "'Inter', sans-serif",
+                  fontWeight: 600, fontSize: "1rem", letterSpacing: 0.5,
+                  boxShadow: `0 8px 25px ${theme.accentSoft}`,
                   display: "inline-flex", alignItems: "center", gap: 8,
                 }}
               >
                 Say Hello
               </motion.a>
 
-              {/* Download Resume CTA on Hero */}
-              <motion.a whileHover={{ scale: 1.03, y: -2 }} whileTap={{ scale: 0.97 }}
+              <motion.a whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}
                 href={PROFILE.resumeUrl}
-                download
+                download="Savita_Pant_Resume.pdf"
                 style={{
-                  background: "transparent", color: theme.text,
-                  border: `1.5px solid ${theme.border}`, padding: "13px 30px",
-                  borderRadius: 50, textDecoration: "none",
-                  fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 700,
-                  fontSize: "0.95rem", letterSpacing: 1,
+                  background: theme.bgCard, color: theme.text,
+                  border: `1px solid ${theme.border}`, padding: "14px 32px",
+                  borderRadius: 12, textDecoration: "none",
+                  fontFamily: "'Inter', sans-serif", fontWeight: 600,
+                  fontSize: "1rem", letterSpacing: 0.5,
                   display: "inline-flex", alignItems: "center", gap: 8,
+                  backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)",
+                  boxShadow: `0 4px 15px rgba(0,0,0,0.05)`,
                 }}
               >
                 <DownloadIcon /> Resume
               </motion.a>
+              
+              <div style={{ width: 1, height: 24, background: theme.border, marginLeft: 8, marginRight: 8 }} className="desktop-divider" />
 
-              <motion.a whileHover={{ scale: 1.03, y: -2 }} whileTap={{ scale: 0.97 }}
-                href={PROFILE.github} target="_blank" rel="noopener noreferrer"
-                style={{
-                  background: "transparent", color: theme.text,
-                  border: `1.5px solid ${theme.border}`, padding: "13px 30px",
-                  borderRadius: 50, textDecoration: "none",
-                  fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 700,
-                  fontSize: "0.95rem", letterSpacing: 1,
-                }}
-              >
-                GitHub
-              </motion.a>
-            </div>
-
-            <div style={{ display: "flex", gap: 18, marginTop: 36 }}>
-              {[
-                { icon: <GithubIcon />, href: PROFILE.github },
-                { icon: <LinkedInIcon />, href: PROFILE.linkedin },
-                { icon: <MailIcon />, href: `mailto:${PROFILE.email}` },
-              ].map((s, i) => (
-                <motion.a key={i} whileHover={{ y: -3, color: theme.accent }}
-                  href={s.href} target={s.href.startsWith("http") ? "_blank" : undefined}
-                  rel="noopener noreferrer" style={{ color: theme.textSoft, transition: "color 0.2s" }}>
-                  {s.icon}
-                </motion.a>
-              ))}
+              <div style={{ display: "flex", gap: 16 }}>
+                {[
+                  { icon: <GithubIcon />, href: PROFILE.github },
+                  { icon: <LinkedInIcon />, href: PROFILE.linkedin },
+                ].map((s, i) => (
+                  <motion.a key={i} whileHover={{ y: -3, color: theme.accent }}
+                    href={s.href} target={s.href.startsWith("http") ? "_blank" : undefined}
+                    rel="noopener noreferrer" style={{ color: theme.textSoft, transition: "color 0.2s" }}>
+                    {s.icon}
+                  </motion.a>
+                ))}
+              </div>
             </div>
           </motion.div>
 
-          {/* Profile Photo */}
-          <motion.div initial={{ x: 50, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.8, delay: 0.2 }}
-            style={{ display: "flex", justifyContent: "center" }}>
-            <div style={{ position: "relative" }}>
+          {/* Profile Photo - Glassmorphism update */}
+          <motion.div initial={{ x: 30, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.8, delay: 0.2 }}
+            style={{ display: "flex", justifyContent: "flex-end", position: "relative" }}>
+            <div style={{ position: "relative", width: "100%", maxWidth: 440 }}>
               <div style={{
-                width: 340, height: 400, borderRadius: 200, overflow: "hidden", position: "relative",
-                background: `linear-gradient(160deg, ${theme.accentSoft}, ${theme.roseSoft}, ${theme.bgCard})`,
-                border: `2px solid ${theme.border}`,
+                width: "100%", aspectRatio: "4/5", borderRadius: 24, overflow: "hidden", position: "relative",
+                background: theme.bgCard,
+                border: `1px solid ${theme.border}`,
+                boxShadow: `0 25px 50px -12px rgba(0,0,0,0.35)`,
+                zIndex: 2,
               }}>
                 <img
                   src={import.meta.env.BASE_URL + "profile.jpg"}
@@ -532,8 +535,8 @@ function HomeSection({ theme, mode }) {
                   }}
                 />
               </div>
-              <div style={{ position: "absolute", top: -30, left: -30, width: 80, height: 80, borderRadius: "50%", background: theme.rose, opacity: 0.06, filter: "blur(25px)" }} />
-              <div style={{ position: "absolute", bottom: -20, right: -20, width: 100, height: 100, borderRadius: "50%", background: theme.accent, opacity: 0.06, filter: "blur(30px)" }} />
+              <div style={{ position: "absolute", top: -40, left: -40, width: 220, height: 220, borderRadius: "50%", background: theme.accent, opacity: 0.2, filter: "blur(60px)", zIndex: 1 }} />
+              <div style={{ position: "absolute", bottom: -40, right: -40, width: 260, height: 260, borderRadius: "50%", background: theme.rose, opacity: 0.15, filter: "blur(60px)", zIndex: 1 }} />
             </div>
           </motion.div>
         </div>
@@ -543,17 +546,17 @@ function HomeSection({ theme, mode }) {
         <Reveal delay={0.2}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20 }} className="stats-grid">
             {[
-              { num: "2+", label: "Projects Built" },
-              { num: "150+", label: "DSA Problems" },
-              { num: "5", label: "Certifications" },
-              { num: "15+", label: "API Endpoints" },
+              { num: "3+", label: "Projects Built" },
+              { num: "1+", label: "Research Paper" },
+              { num: "3+", label: "Certifications" },
+              { num: "6+", label: "Languages" },
             ].map((s, i) => (
               <div key={i} style={{
                 textAlign: "center", padding: "28px 16px",
                 background: theme.bgCard, border: `1px solid ${theme.border}`, borderRadius: 16,
               }}>
-                <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "2.2rem", fontWeight: 500, color: theme.accent }}>{s.num}</span>
-                <p style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "0.85rem", color: theme.textSoft, marginTop: 6, letterSpacing: 1, textTransform: "uppercase" }}>{s.label}</p>
+                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "2.2rem", fontWeight: 500, color: theme.accent }}>{s.num}</span>
+                <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.85rem", color: theme.textSoft, marginTop: 6, letterSpacing: 1, textTransform: "uppercase" }}>{s.label}</p>
               </div>
             ))}
           </div>
@@ -568,36 +571,36 @@ function HomeSection({ theme, mode }) {
 function AboutSection({ theme }) {
   return (
     <section id="About" style={{ paddingTop: 80, paddingBottom: 80 }}>
-      <div style={{ maxWidth: 960, margin: "0 auto", padding: "0 32px" }}>
+      <div style={{ maxWidth: 1150, margin: "0 auto", padding: "0 32px" }}>
         <SectionTitle label="About Me" title="Passion Meets Purpose" theme={theme} />
 
         <Reveal>
           <div style={{ display: "grid", gridTemplateColumns: "5fr 3fr", gap: 40, marginBottom: 56 }} className="about-grid">
             <div>
-              <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "1.02rem", color: theme.textSoft, lineHeight: 1.85, marginBottom: 18 }}>
-                I'm Krity Sharma — a Computer Science student at Lovely Professional University with a love for building full-stack web applications. From crafting secure authentication systems to engineering real-time communication, I enjoy turning complex problems into elegant, user-friendly solutions.
+              <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "1.02rem", color: theme.textSoft, lineHeight: 1.85, marginBottom: 18 }}>
+                I'm Savita Pant — a Computer Science student at Lovely Professional University with a passion for software development. I enjoy building applications that solve real-world problems and creating engaging user experiences.
               </p>
-              <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "1.02rem", color: theme.textSoft, lineHeight: 1.85, marginBottom: 18 }}>
-                My toolkit revolves around the MERN stack — React, Node.js, Express, and MongoDB — and I'm constantly sharpening my skills through competitive programming, certifications, and hands-on project building.
+              <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "1.02rem", color: theme.textSoft, lineHeight: 1.85, marginBottom: 18 }}>
+                My toolkit spans across multiple languages like C++, JavaScript, Python, and Java, alongside modern web frameworks like React and Node.js. I am dedicated to continuously learning and adapting to new technologies.
               </p>
-              <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "1.02rem", color: theme.textSoft, lineHeight: 1.85 }}>
-                Beyond code, I believe in giving back. I've contributed to environmental awareness initiatives with Familial Forestry NGO and enjoy mentoring peers. Every line of code I write is a step toward building something meaningful.
+              <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "1.02rem", color: theme.textSoft, lineHeight: 1.85 }}>
+                Beyond coding, I have a strong foundation in data structures and algorithms, and I actively engage in academic research and leadership roles, such as serving as a Class Representative.
               </p>
             </div>
             <div style={{ background: theme.bgCard, border: `1px solid ${theme.border}`, borderRadius: 20, padding: 28, height: "fit-content" }}>
-              <h3 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "0.85rem", color: theme.rose, letterSpacing: 3, textTransform: "uppercase", marginBottom: 20 }}>
+              <h3 style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.85rem", color: theme.rose, letterSpacing: 3, textTransform: "uppercase", marginBottom: 20 }}>
                 Quick Glance
               </h3>
               {[
-                ["Name", "Krity Sharma"],
+                ["Name", "Savita Pant"],
                 ["Studying", "B.Tech CSE"],
                 ["University", "LPU, Punjab"],
-                ["Focus", "MERN Stack"],
-                ["DSA", "150+ on LeetCode"],
+                ["Focus", "Software Eng."],
+                ["Contact", "+91-6284511645"],
               ].map(([k, v]) => (
                 <div key={k} style={{ display: "flex", justifyContent: "space-between", padding: "9px 0", borderBottom: `1px solid ${theme.border}` }}>
-                  <span style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "0.88rem", color: theme.textSoft }}>{k}</span>
-                  <span style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "0.88rem", color: theme.text, fontWeight: 500 }}>{v}</span>
+                  <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.88rem", color: theme.textSoft }}>{k}</span>
+                  <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.88rem", color: theme.text, fontWeight: 500 }}>{v}</span>
                 </div>
               ))}
             </div>
@@ -605,20 +608,20 @@ function AboutSection({ theme }) {
         </Reveal>
 
         <Reveal delay={0.15}>
-          <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1.6rem", fontWeight: 500, color: theme.text, marginBottom: 24 }}>
+          <h2 style={{ fontFamily: "'Inter', sans-serif", fontSize: "1.6rem", fontWeight: 500, color: theme.text, marginBottom: 24 }}>
             Skills & Technologies
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 16 }} className="skills-grid">
             {Object.entries(SKILLS).map(([cat, items]) => (
               <div key={cat} style={{ background: theme.bgCard, border: `1px solid ${theme.border}`, borderRadius: 16, padding: 24 }}>
-                <h4 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "0.8rem", color: theme.rose, letterSpacing: 2, textTransform: "uppercase", marginBottom: 14 }}>{cat}</h4>
+                <h4 style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.8rem", color: theme.rose, letterSpacing: 2, textTransform: "uppercase", marginBottom: 14 }}>{cat}</h4>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                   {items.map((s) => (
                     <motion.span key={s} whileHover={{ y: -2, background: theme.accent, color: "#fff" }}
                       style={{
                         padding: "6px 14px", borderRadius: 50,
                         border: `1px solid ${theme.border}`, background: theme.bgSoft,
-                        fontFamily: "'Lora', Georgia, serif", fontSize: "0.82rem", color: theme.text,
+                        fontFamily: "'Inter', sans-serif", fontSize: "0.82rem", color: theme.text,
                         cursor: "default", transition: "all 0.25s",
                       }}>{s}</motion.span>
                   ))}
@@ -631,17 +634,17 @@ function AboutSection({ theme }) {
         <FloralDivider theme={theme} />
 
         <Reveal>
-          <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1.6rem", fontWeight: 500, color: theme.text, marginBottom: 24 }}>Education</h2>
+          <h2 style={{ fontFamily: "'Inter', sans-serif", fontSize: "1.6rem", fontWeight: 500, color: theme.text, marginBottom: 24 }}>Education</h2>
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             {EDUCATION.map((e, i) => (
               <div key={i} style={{ background: theme.bgCard, border: `1px solid ${theme.border}`, borderRadius: 16, padding: 24, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
                 <div>
-                  <h3 style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "1.05rem", color: theme.text, fontWeight: 600 }}>{e.degree}</h3>
-                  <p style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "0.95rem", color: theme.rose, fontStyle: "italic" }}>{e.school}, {e.location}</p>
+                  <h3 style={{ fontFamily: "'Inter', sans-serif", fontSize: "1.05rem", color: theme.text, fontWeight: 600 }}>{e.degree}</h3>
+                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.95rem", color: theme.rose, fontStyle: "italic" }}>{e.school}, {e.location}</p>
                 </div>
                 <div style={{ textAlign: "right" }}>
-                  <span style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "0.82rem", color: theme.textSoft, background: theme.accentSoft, padding: "5px 12px", borderRadius: 8, display: "inline-block" }}>{e.period}</span>
-                  <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "0.88rem", color: theme.accent, fontWeight: 600, marginTop: 6 }}>{e.grade}</p>
+                  <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.82rem", color: theme.textSoft, background: theme.accentSoft, padding: "5px 12px", borderRadius: 8, display: "inline-block" }}>{e.period}</span>
+                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.88rem", color: theme.accent, fontWeight: 600, marginTop: 6 }}>{e.grade}</p>
                 </div>
               </div>
             ))}
@@ -651,7 +654,7 @@ function AboutSection({ theme }) {
         <FloralDivider theme={theme} />
 
         <Reveal>
-          <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1.6rem", fontWeight: 500, color: theme.text, marginBottom: 24 }}>Certifications</h2>
+          <h2 style={{ fontFamily: "'Inter', sans-serif", fontSize: "1.6rem", fontWeight: 500, color: theme.text, marginBottom: 24 }}>Certifications</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 14 }}>
             {CERTIFICATES.map((c, i) => {
               const Wrapper = c.link ? "a" : "div";
@@ -668,12 +671,12 @@ function AboutSection({ theme }) {
                     onMouseEnter={(e) => e.currentTarget.style.borderColor = theme.rose}
                     onMouseLeave={(e) => e.currentTarget.style.borderColor = theme.border}>
                     <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 4 }}>
-                      <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "0.92rem", color: theme.text, fontWeight: 500, flex: 1 }}>{c.name}</p>
+                      <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.92rem", color: theme.text, fontWeight: 500, flex: 1 }}>{c.name}</p>
                       {c.link && <span style={{ color: theme.textSoft, flexShrink: 0 }}><ExternalIcon /></span>}
                     </div>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                      <span style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "0.85rem", color: theme.rose, fontStyle: "italic" }}>{c.issuer}</span>
-                      <span style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "0.78rem", color: theme.textSoft }}>{c.date}</span>
+                      <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.85rem", color: theme.rose, fontStyle: "italic" }}>{c.issuer}</span>
+                      <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.78rem", color: theme.textSoft }}>{c.date}</span>
                     </div>
                   </Wrapper>
                 </motion.div>
@@ -685,14 +688,14 @@ function AboutSection({ theme }) {
         <FloralDivider theme={theme} />
 
         <Reveal>
-          <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1.6rem", fontWeight: 500, color: theme.text, marginBottom: 24 }}>Achievements</h2>
+          <h2 style={{ fontFamily: "'Inter', sans-serif", fontSize: "1.6rem", fontWeight: 500, color: theme.text, marginBottom: 24 }}>Achievements</h2>
           {ACHIEVEMENTS.map((a, i) => (
             <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 14, marginBottom: 16, padding: "14px 20px", background: theme.bgCard, border: `1px solid ${theme.border}`, borderRadius: 12 }}>
               <span style={{ color: theme.accent, marginTop: 2, flexShrink: 0, fontSize: "0.7rem" }}>◆</span>
               <div style={{ flex: 1 }}>
-                <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "0.95rem", color: theme.text, lineHeight: 1.6 }}>{a.text}</p>
+                <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.95rem", color: theme.text, lineHeight: 1.6 }}>{a.text}</p>
               </div>
-              <span style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "0.78rem", color: theme.textSoft, whiteSpace: "nowrap" }}>{a.date}</span>
+              <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.78rem", color: theme.textSoft, whiteSpace: "nowrap" }}>{a.date}</span>
             </div>
           ))}
         </Reveal>
@@ -706,11 +709,11 @@ function AboutSection({ theme }) {
 function ProjectsSection({ theme }) {
   return (
     <section id="Projects" style={{ paddingTop: 80, paddingBottom: 80 }}>
-      <div style={{ maxWidth: 960, margin: "0 auto", padding: "0 32px" }}>
+      <div style={{ maxWidth: 1150, margin: "0 auto", padding: "0 32px" }}>
         <SectionTitle label="My Work" title="Things I've Built" theme={theme} />
 
         <Reveal>
-          <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "1.02rem", color: theme.textSoft, maxWidth: 560, lineHeight: 1.7, marginBottom: 48 }}>
+          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "1.02rem", color: theme.textSoft, maxWidth: 560, lineHeight: 1.7, marginBottom: 48 }}>
             Each project is a labor of love — from the architecture to the last pixel. Here are the highlights.
           </p>
         </Reveal>
@@ -726,29 +729,29 @@ function ProjectsSection({ theme }) {
                 }}
                 onMouseEnter={(e) => { e.currentTarget.style.borderColor = p.color; e.currentTarget.style.boxShadow = `0 6px 30px ${p.color}18`; }}
                 onMouseLeave={(e) => { e.currentTarget.style.borderColor = theme.border; e.currentTarget.style.boxShadow = "none"; }}>
-                <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "5rem", fontWeight: 500, color: p.color, opacity: 0.08, position: "absolute", top: -10, right: 20, lineHeight: 1 }}>
+                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "5rem", fontWeight: 500, color: p.color, opacity: 0.08, position: "absolute", top: -10, right: 20, lineHeight: 1 }}>
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 6, flexWrap: "wrap", gap: 8 }}>
                   <div>
-                    <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1.5rem", fontWeight: 500, color: theme.text }}>{p.title}</h3>
-                    <p style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "0.95rem", color: theme.rose, fontStyle: "italic" }}>{p.subtitle}</p>
+                    <h3 style={{ fontFamily: "'Inter', sans-serif", fontSize: "1.5rem", fontWeight: 500, color: theme.text }}>{p.title}</h3>
+                    <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.95rem", color: theme.rose, fontStyle: "italic" }}>{p.subtitle}</p>
                   </div>
                   <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
-                    <span style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "0.8rem", color: theme.textSoft, background: theme.accentSoft, padding: "5px 12px", borderRadius: 8 }}>{p.date}</span>
+                    <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.8rem", color: theme.textSoft, background: theme.accentSoft, padding: "5px 12px", borderRadius: 8 }}>{p.date}</span>
                     <a href={p.github} target="_blank" rel="noopener noreferrer" style={{ color: theme.textSoft }}><GithubIcon /></a>
                   </div>
                 </div>
-                <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "0.95rem", color: theme.textSoft, lineHeight: 1.75, margin: "16px 0 18px" }}>{p.description}</p>
+                <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.95rem", color: theme.textSoft, lineHeight: 1.75, margin: "16px 0 18px" }}>{p.description}</p>
                 <ul style={{ margin: "0 0 20px 0", paddingLeft: 18 }}>
                   {p.highlights.map((h, j) => (
-                    <li key={j} style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "0.9rem", color: theme.textSoft, lineHeight: 1.7, marginBottom: 5 }}>{h}</li>
+                    <li key={j} style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.9rem", color: theme.textSoft, lineHeight: 1.7, marginBottom: 5 }}>{h}</li>
                   ))}
                 </ul>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                   {p.tags.map((t) => (
                     <span key={t} style={{
-                      fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "0.78rem",
+                      fontFamily: "'Inter', sans-serif", fontSize: "0.78rem",
                       fontWeight: 600, letterSpacing: 0.5, color: theme.accent,
                       background: theme.accentSoft, padding: "4px 12px", borderRadius: 50,
                     }}>{t}</span>
@@ -772,7 +775,7 @@ function ContactSection({ theme }) {
         <SectionTitle label="Get In Touch" title="Let's Connect" theme={theme} />
 
         <Reveal>
-          <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "1.05rem", color: theme.textSoft, lineHeight: 1.8, marginBottom: 48, maxWidth: 520, margin: "0 auto 48px" }}>
+          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "1.05rem", color: theme.textSoft, lineHeight: 1.8, marginBottom: 48, maxWidth: 520, margin: "0 auto 48px" }}>
             Whether you have a project idea, a collaboration opportunity, or just want to say hello — I'd love to hear from you.
           </p>
         </Reveal>
@@ -781,8 +784,8 @@ function ContactSection({ theme }) {
           <div style={{ display: "flex", flexDirection: "column", gap: 16, alignItems: "center" }}>
             {[
               { icon: <MailIcon />, label: PROFILE.email, href: `mailto:${PROFILE.email}` },
-              { icon: <GithubIcon />, label: "github.com/Krity2004", href: PROFILE.github },
-              { icon: <LinkedInIcon />, label: "Krity Sharma", href: PROFILE.linkedin },
+              { icon: <GithubIcon />, label: "github.com/SavitaBytes", href: PROFILE.github },
+              { icon: <LinkedInIcon />, label: "Savita Pant", href: PROFILE.linkedin },
             ].map((c, i) => (
               <motion.a key={i} whileHover={{ y: -3 }}
                 href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer"
@@ -795,7 +798,7 @@ function ContactSection({ theme }) {
                 onMouseEnter={(e) => e.currentTarget.style.borderColor = theme.rose}
                 onMouseLeave={(e) => e.currentTarget.style.borderColor = theme.border}>
                 <span style={{ color: theme.rose }}>{c.icon}</span>
-                <span style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "0.95rem", color: theme.text }}>{c.label}</span>
+                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.95rem", color: theme.text }}>{c.label}</span>
                 <span style={{ marginLeft: "auto", color: theme.textSoft }}><ExternalIcon /></span>
               </motion.a>
             ))}
@@ -809,10 +812,10 @@ function ContactSection({ theme }) {
             background: `linear-gradient(135deg, ${theme.accentSoft}, ${theme.roseSoft})`,
             border: `1px solid ${theme.border}`, borderRadius: 24, padding: 40,
           }}>
-            <p style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1.4rem", fontWeight: 500, color: theme.text, fontStyle: "italic", marginBottom: 12 }}>
+            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "1.4rem", fontWeight: 500, color: theme.text, fontStyle: "italic", marginBottom: 12 }}>
               "The best way to predict the future is to create it."
             </p>
-            <p style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "0.95rem", color: theme.textSoft, letterSpacing: 1 }}>
+            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.95rem", color: theme.textSoft, letterSpacing: 1 }}>
               — Abraham Lincoln
             </p>
           </div>
@@ -840,8 +843,8 @@ function Footer({ theme }) {
           </motion.a>
         ))}
       </div>
-      <p style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "0.88rem", color: theme.textSoft, display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}>
-        Made By <span style={{ color: theme.accent, fontWeight: 600 }}>Krity Sharma</span> · {new Date().getFullYear()}
+      <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.88rem", color: theme.textSoft, display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}>
+        Made By <span style={{ color: theme.accent, fontWeight: 600 }}>Savita Pant</span> · {new Date().getFullYear()}
       </p>
     </footer>
   );
@@ -881,7 +884,7 @@ export default function Portfolio() {
 
   return (
     <div style={{ background: theme.bg, minHeight: "100vh", transition: "background 0.5s, color 0.5s" }}>
-      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
       <style>{`
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
